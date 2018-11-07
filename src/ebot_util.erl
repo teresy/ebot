@@ -79,7 +79,7 @@ info(Config) ->
 
 merge_workers_lists(Dict1, Dict2) ->
     dict:merge(
-      fun(_Key,Val1, Val2) -> lists:append(Val1, Val2) end,
+      fun(_Key,Val1, Val2) -> Val1 ++ Val2 end,
       Dict1,
       Dict2).
 
